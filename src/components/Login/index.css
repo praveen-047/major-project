@@ -10,17 +10,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 .login-card{
     background-color: white;
-    width: 40%;
-    border-radius: 20px;
+    width: 38%;
+    box-sizing: border-box;
+    border-radius: 40px;
+    padding: 20px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 }
 .login-avatar-container{
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 25px;
+    margin-top: 20px;
 }
 img{
     width: 100px;
     height: 130px;
+}
+form{
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+}
+button{
+    background-color: #217BB5;
+    width: 100%;
+    border: 0px;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px ;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
 }
