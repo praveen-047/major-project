@@ -1,53 +1,49 @@
 import { Component } from "react";
+import A1 from "./images/A1.png";
+import A2 from "./images/A2.png";
+import A3 from "./images/A3.png";
 import "./index.css";
 
 class Signup extends Component {
   render() {
     return (
-      <div className="container">
-        <div className="login-box">
-          <div className="avatars">
-            <img
-              src="https://i.ibb.co/vZ1QXwC/avatar1.png"
-              alt="avatar1"
-            />
-            <img
-              src="https://i.ibb.co/m0cYpD4/avatar2.png"
-              alt="avatar2"
-            />
-            <img
-              src="https://i.ibb.co/5hr0tMC/avatar3.png"
-              alt="avatar3"
-            />
+      <div className="signup-container">
+        <div className="signup-card">
+          {/* Avatars */}
+          <div className="signup-avatar-container">
+            <img src={A1} alt="avatar1" />
+            <img src={A2} alt="avatar2" />
+            <img src={A3} alt="avatar3" />
           </div>
 
-          <button className="google-btn">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-              alt="Google Logo"
-            />
-            Sign in with Google
-          </button>
-
-          <p className="divider">Or</p>
-
+          {/* Signup Form */}
           <form>
-            {/* In React, use htmlFor instead of for */}
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              required
+            />
+
             <label htmlFor="email">Email</label>
             <input
               type="email"
               id="email"
               placeholder="Enter your email address"
+              required
             />
 
-            <button type="submit" className="signin-btn">
-              Sign in
-            </button>
-          </form>
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
 
-          <p className="footer-text">
-            Already a user? <a href="#">Login</a>
-          </p>
+            <button type="submit">Register / Signup</button>
+          </form>
         </div>
       </div>
     );

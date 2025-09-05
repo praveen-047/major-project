@@ -1,98 +1,68 @@
-
-/* White card box */
-.login-box {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 15px;
-  width: 320px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Avatars */
-.avatars {
+.signup-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #154d71; /* same blue as login */
   display: flex;
   justify-content: center;
-  margin-bottom: 1.5rem;
-  gap: 1rem;
-}
-
-.avatars img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-
-/* Google button */
-.google-btn {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #000;
-  border-radius: 8px;
-  background: #fff;
-  font-weight: bold;
-  cursor: pointer;
 }
 
-.google-btn img {
-  width: 20px;
-  height: 20px;
+.signup-card {
+  background-color: white;
+  width: 40%;
+  border-radius: 40px;
+  padding: 20px;
 }
 
-/* Divider */
-.divider {
-  margin: 1rem 0;
-  color: #555;
+.signup-avatar-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0 30px 0;
 }
 
-/* Input fields */
+.signup-avatar-container img {
+  width: 100px;
+  height: 130px;
+}
+
 form {
-  text-align: left;
+  width: 100%;
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
 }
 
 form label {
-  display: block;
-  font-size: 14px;
-  margin-bottom: 5px;
+  margin: 10px 0 5px 0;
+  font-weight: bold;
 }
 
 form input {
-  width: 100%;
   padding: 10px;
-  margin-bottom: 1rem;
-  border: 1px solid #aaa;
+  border: 1px solid #ccc;
   border-radius: 8px;
-  outline: none;
+  margin-bottom: 15px;
+  font-size: 16px;
 }
 
-/* Sign-in button */
-.signin-btn {
-  width: 100%;
-  padding: 10px;
+button {
+  background-color: #217bb5;
   border: none;
-  border-radius: 8px;
-  background: #0a5275;
   color: white;
-  font-weight: bold;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-.signin-btn:hover {
-  background: #08445e;
-}
-
-/* Footer text */
-.footer-text {
-  margin-top: 1rem;
-  font-size: 14px;
-}
-
-.footer-text a {
-  color: #0a5275;
-  text-decoration: none;
-  font-weight: bold;
+button:hover {
+  background-color: #185c86;
 }
