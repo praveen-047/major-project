@@ -5,6 +5,67 @@ import A3 from "./images/A3.png";
 import "./index.css";
 
 class Signup extends Component {
+  state = {
+    name:'',
+    email:'',
+    password:'',
+  }
+
+  onChangeName = (event)=>{
+    this.setState({name:event.target.value})
+  }
+
+  onChangeEmail = (event)=>{
+    this.setState({email:event.target.value})
+  }
+
+  onChangePassword = (event)=>{
+    this.setState({password:event.target.value})
+  }
+
+  onClickLogin = ()=>{
+    const{history} = this.props
+    history.replace('/login')
+  }
+
+  onSignupSuccess = ()=>{
+    const {history} = this.props 
+    history.replace('/login')
+  }
+  
+  onSignupFailure = (error)=>{
+    this.setState({
+      showError:true,
+      error,
+    })
+  }
+
+  submitSignupForm = async (event)=>{
+    event.preventDefault()
+    const {name,email,password} = this.state
+    const userDetails = {name,email,password}
+
+    const url = "http://localhost:5000/signup";
+
+    const options = {
+      method:'POST',
+      headers:{
+        "Content-Type": "application/json",
+        'Accept': 'application/json'
+      },
+      body:JSON.stringify(userDetails)
+    }
+
+    const response = await fetch(url,options)
+    const data = await response.json()
+    if(response.ok===true){
+      this.onSignupSuccess()
+    }
+    else{
+      this.onSignupFailure(data.error_msg)
+    }
+  }
+
   render() {
     return (
       <div className="signup-container">
@@ -17,13 +78,14 @@ class Signup extends Component {
           </div>
 
           {/* Signup Form */}
-          <form className="signup-form">
+          <form onSubmit={this.submitSignupForm} className="signup-form">
             <label htmlFor="name">Name</label>
             <input
               type="text"
               id="name"
               placeholder="Enter your name"
               required
+              onChange={this.onChangeName}
             />
 
             <label htmlFor="email">Email</label>
@@ -32,6 +94,7 @@ class Signup extends Component {
               id="email"
               placeholder="Enter your email address"
               required
+              onChange={this.onChangeEmail}
             />
 
             <label htmlFor="password">Password</label>
@@ -40,9 +103,11 @@ class Signup extends Component {
               id="password"
               placeholder="Enter your password"
               required
+              onChange={this.onChangePassword}
             />
 
             <button className="signup-button" type="submit">Register / Signup</button>
+            <p className="login-link" onClick={this.onClickLogin}>Already have a account? Login</p>
           </form>
         </div>
       </div>

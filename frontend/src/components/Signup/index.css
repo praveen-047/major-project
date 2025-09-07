@@ -1,8 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "roboto";
+@import url('https://fonts.googleapis.com/css2?family=Preahvihear&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "roboto";
+    box-sizing: border-box;
 }
 
 .signup-container {
@@ -66,4 +67,12 @@
 
 .signup-button:hover {
   background-color: #185c86;
+}
+.login-link{
+  text-decoration: underline;
+    color: #217BB5;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-top: 10px;
 }
