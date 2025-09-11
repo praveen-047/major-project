@@ -46,20 +46,20 @@ class Home extends Component {
     }
 
     return (
-      <div className="home-page">
-        <h1>Welcome, {user.name} 👋</h1>
+      // <div className="home-page">
+      //   <h1>Welcome, {user.name} 👋</h1>
 
-        {/* ✅ Show avatar if available */}
-        {user.avatar ? (
-          <img
-            src={user.avatar}
-            alt="User Avatar"
-            style={{ width: "150px", height: "150px", borderRadius: "50%" }}
-          />
-        ) : (
-          <p>No avatar selected</p>
-        )}
-      </div>
+      //   {/* ✅ Show avatar if available */}
+      //   {user.avatar ? (
+      //     <img
+      //       src={user.avatar}
+      //       alt="User Avatar"
+      //       style={{ width: "150px", height: "150px", borderRadius: "50%" }}
+      //     />
+      //   ) : (
+      //     <p>No avatar selected</p>
+      //   )}
+      // </div>
     );
   }
 }
