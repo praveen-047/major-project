@@ -9,7 +9,7 @@
 .login-container{
     width: 100vw;
     height: 100vh;
-    background-color: #154D71;
+   background: linear-gradient(180deg, #1a1a2e, #16213e, #0f3460);
     display: flex;
     justify-content: center;
     align-items: center;
