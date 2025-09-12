@@ -93,7 +93,7 @@ class Meeting extends Component{
                         {/* <video muted loop autoPlay>
                             <source src={map} type="video/mp4"/>
                         </video> */}
-                         <img className="map" src={map_img} alt="video display" />
+                         <img className="map" src={map_img} alt="map display" />
                      </div>
                      </div>
                 </div>
