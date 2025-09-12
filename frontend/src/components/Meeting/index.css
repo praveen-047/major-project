@@ -2,4 +2,132 @@
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+    /* overflow: hidden; */
 }
+.meeting-header{
+    background-color: #1C6EA4;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 10px;
+}
+.meeting-icons-container{
+    margin: 0px 10px;
+} 
+.meeting-icons{
+    color: white;
+    margin: 5px 8px;
+    height: 30px;
+    width: 30px;
+}
+.meeting-online-container{
+    width: 300px ;
+    background-color: #154D71 ;
+    height: 100vh;
+    /* box-sizing: border-box; */
+}
+.meeting-searchbar-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 5px;
+    
+}
+.meeting-searchbar {
+    display: flex;
+    align-items: center;
+    background-color: #1C6EA4;
+    margin-left: 10px;
+    border-radius: 10px;
+    width: 70%;
+    padding: 5px 10px;
+    color: white; /* ensures icon stays white */
+}
+.meeting-searchbar svg {
+    margin-right: 8px; /* spacing between icon & input */
+    flex-shrink: 0;    /* prevents icon from disappearing */
+}
+input {
+    background-color: transparent;
+    border: none;
+    color: white;       /* ✅ keep text visible */
+    height: 30px;
+    outline: none;
+    flex: 1;            /* ✅ expands input to fill remaining space */
+}
+input::placeholder{
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+}
+.meeting-heading{
+    color: white;
+    margin: 40px 20px 20px 20px;
+    text-transform: capitalize;
+}
+.meeting-user{
+    background-color: #1C6EA4;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+
+}
+.meeting-img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.userName{
+    color: white;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.meeting-body-container{
+    background: linear-gradient(180deg, #1a1a2e, #16213e, #0f3460);
+    display: flex;
+
+}
+.meeting-video-display{
+    display: flex;
+    padding:20px;
+    width: 100%;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+}
+
+.meeting-video{
+    height: 160px;
+    width: 250px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.meeting-map{
+    width: 100%;
+    justify-self: center;
+}
+video{
+    width: 100%;
+    margin: 20px;
+    margin: auto;
+}
+.meeting-video-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+     /* box-sizing: border-box; */
+}
+
+/* .meeting-video-container {
+    display: flex;
+    align-items: center;   
+    justify-content: center; 
+    width: 100%;
+} */
